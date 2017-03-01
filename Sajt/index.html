@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<title>B&K Family D.O.O. Zrenjanin</title>
+<title>Impuls Festival-Početna</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <meta charset="UTF-8"/>
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
@@ -147,6 +148,14 @@ fieldset.title legend {
 .display-container{
   min-width: 100%;
 }
+ul{
+}
+
+li{
+	list-style: none;
+}
+
+
 
 
 
@@ -154,27 +163,31 @@ fieldset.title legend {
 
 
 </style>
-<body>
-<!-- Navigacioni meni -->
+<body class = "w3-animate-opacity">
+<!-- Navigacioni meni --> 
 <div class="w3-top">
-  <ul class="w3-navbar w3-white" id="myNavbar">
+  <ul class="w3-navbar w3-white w3-padding-8 w3-container" id="myNavbar">
+  <div class  = "w3-col w3-left-align" id = "logo" style="width: 90px;">
+     <a href = "index.html"><img class = " branding" src = "imgs/Impuls.png"></a>
+</div>
     <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
       <a class="item w3-text-black w3-padding-large w3-hover" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
       </a>
     </li>
-    <li class="w3-left-align"><a class="item w3-text-black w3-padding-large w3-hover" href="index.html">POČETNA</a></li>
-    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="o-festivalu.html">O FESTIVALU</a></li>
-    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="/">PROGRAM</a></li>
-    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="/">SATNICA</a></li>
-    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="o-nama.html">O NAMA</a></li>
-    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="kontakt.html">KONTAKT</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="index.html"><b>POČETNA</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="o-festivalu.html"><b>O FESTIVALU</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="/"><b>PROGRAM</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="/"><b>SATNICA</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="o-nama.html"><b>O NAMA</a></li>
+    <li class="w3-hide-small"><a class="item w3-text-black w3-padding-large w3-hover" href="kontakt.html"><b>KONTAKT</a></li>
     </li>
   </ul>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
     <ul class="w3-navbar w3-left-align w3-white">
+    <li><a class = "w3-padding-large" href="index.html" onclick="toggleFunction()">POČETNA</a></li>
       <li><a class = "w3-padding-large" href="o-festivalu.html" onclick="toggleFunction()">O FESTIVALU</a></li>
       <li><a class = "w3-padding-large" href="/" onclick="toggleFunction()">PROGRAM</a></li>
       <li><a class = "w3-padding-large" href="/" onclick="toggleFunction()">SATNICA</a></li>
@@ -183,6 +196,8 @@ fieldset.title legend {
     </ul>
   </div>
 </div>
+ 
+
 
 <!-- Prva parallax slika -->
 <div class="w3-display-container ">
@@ -265,8 +280,9 @@ function myFunction() {
     var navbar = document.getElementById("myNavbar");
     var li = document.getElementById("item");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-opacity "+ " w3-white" + "";
+        navbar.className = "w3-navbar" +  " w3-padding-8" + " w3-animate-opacity "+ "w3-container" + " w3-white" + "";
         item.className = "w3-black";
+
     } else {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate- w3-white", "");
     }
